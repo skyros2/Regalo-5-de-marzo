@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background: #faf7f2;
+  color: #4b3a3a;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #7a2d3a;
+}
+
+body {
+  background:
+    linear-gradient(rgba(250,247,242,0.95), rgba(250,247,242,0.95)),
+    url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+}
+
+
+header {
+  padding: 30px 20px;
+}
+
+h1 {
+  color: #c9184a;
+  margin-bottom: 5px;
+}
+
+header p {
+  margin-top: 0;
+}
+
+#countdown {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #fffdf9;
+  border: 1px solid #e6d6c9;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.unlocked:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+.card.locked {
+  opacity: 0.6;
+}
+
+.card.unlocked {
+  border: 1px solid #e6cfc2;
+  background: linear-gradient(180deg, #fffdf9, #faf4ee);
+}
+
+.card span.lock {
+  font-size: 1.2rem;
+  margin-left: 6px;
+}
+
+
+.unlocked {
+  background: #ffe3ec;
+}
+
+footer {
+  margin-top: 30px;
+  padding-bottom: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  max-width: 420px;
+  text-align: center;
+
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+#closeModal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+
+}
+
+.hidden .modal-content{
+  transform: scale(0.9);
+}
+
+.ornament {
+  text-align: center;
+  font-size: 2rem;
+  color: #c7a17a;
+  margin-bottom: 10px;
+}
+
+#modal {
+  background: rgba(0,0,0,0.4);
+}
+
+#modalBody {
+  background: #fffdf8;
+  border-radius: 20px;
+  padding: 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  border: 1px solid #e6d6c9;
+  text-align: center;
+}
+
+#modalBody::before {
+  content: "✉️";
+  display: block;
+  font-size: 2rem;
+  text-align: center;
+  color: #c7a17a;
+  margin-bottom: 10px;
+}
+
+.footer {
+  margin-top: 40px;
+  font-style: italic;
+  color: #8b6f5c;
+}
