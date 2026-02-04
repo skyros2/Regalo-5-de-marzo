@@ -1,16 +1,56 @@
 const cardsContainer = document.getElementById("cards");
 const countdown = document.getElementById("countdown");
 
+//const contents = [
+  //"Flores para la belleza 🌷",
+  //"A veces el amor se derrite como chocolate 🍫",
+  //"Lo escencial no siempre se ve, solo con el corazon se puede ver bien 👸",
+  //"Soporta el cringe",
+  //"I get so lost inside your eyes🎶",
+  //"No soy bueno dando consejos. ¿Puedo interesarte en un comentario sarcástico?",
+  //"The stakes are high, the water's rough but this love is ours🎵",
+  //"Te amo como al fuego📖",
+  //"Te doy mi corazon",
+  //"",
+  //"",
+  //""
+//];
+
 const contents = [
   "Flores para la belleza 🌷",
+
   "A veces el amor se derrite como chocolate 🍫",
-  "Lo escencial no siempre se ve, solo con el corazon se puede ver bien 👸",
-  "Soporta el cringe",
-  "I get so lost inside your eyes🎶",
+
+  "Lo esencial no siempre se ve, solo con el corazón se puede ver bien 👸",
+
+  
+  `<h2>🎥 Para ti</h2>
+  <p>
+    Hay cosas que no quería escribir.  
+    Preferí mirarte y decirlas así.
+  </p>
+
+  <div class="video-wrapper">
+    <iframe
+      src="https://www.youtube.com/embed/m6w7KLJyu4A"
+      title="Video para ti"
+      frameborder="0"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+  `,
+
+  "I get so lost inside your eyes 🎶",
+
   "No soy bueno dando consejos. ¿Puedo interesarte en un comentario sarcástico?",
-  "The stakes are high, the water's rough but this love is ours🎵",
-  "Te amo como al fuego📖",
-  "Te doy mi corazon",
+
+  "The stakes are high, the water's rough but this love is ours 🎵",
+
+  "Te amo como al fuego 📖",
+
+  "Te doy mi corazón 💍",
+
   "",
   "",
   ""
@@ -46,9 +86,8 @@ function render() {
     const card = document.createElement("div");
     card.className = `card ${unlocked ? "unlocked" : "locked"}`;
 
-    card.innerHTML = unlocked
-      ? `<strong>${i}:00</strong><br>$🔒`
-      : `<strong>${i}:00</strong><br>$🔒`;
+    card.innerHTML = `<strong>${i}:00</strong><br>$🔒`;
+      
 
       if (unlocked) {
         card.addEventListener("click", () => {

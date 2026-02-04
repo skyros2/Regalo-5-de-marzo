@@ -73,9 +73,6 @@ main {
   background: linear-gradient(180deg, #fffdf9, #faf4ee);
 }
 
-.card.unlocked:active{
-  transform: scale(0.97);
-}
 
 .card span.lock {
   font-size: 1.2rem;
@@ -173,27 +170,3 @@ footer {
   color: #8b6f5c;
 }
 
-@media (max-width: 600px) {
-
-  h1 {
-    font-size: 2.4rem;
-  }
-
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .card {
-    padding: 18px;
-    font-size: 1rem;
-  }
-
-  .modal-content {
-    max-width: 90%;
-    padding: 24px;
-  }
-
-  #closeModal {
-    font-size: 1.4rem;
-  }
-}
