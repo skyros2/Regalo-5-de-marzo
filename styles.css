@@ -71,8 +71,23 @@ main {
 .card.unlocked {
   border: 1px solid #e6cfc2;
   background: linear-gradient(180deg, #fffdf9, #faf4ee);
+  
 }
 
+.card.unlocked{
+  animation: unlockFade 0.6s ease;
+}
+
+@keyframes unlockFade{
+  from{
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 .card span.lock {
   font-size: 1.2rem;
