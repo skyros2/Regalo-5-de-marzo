@@ -41,7 +41,7 @@ const contents = [
   </div>
   `,
 
-  "I get so lost inside your eyes 🎶(REGALO HARRY)",
+  "PONER TEXTO DE ONE DIRECTION(ONE DIRECTION)",
 
   "No soy bueno dando consejos. ¿Podria interesarte un comentario sarcástico?(REGALO FRIENDS)",
 
@@ -52,13 +52,15 @@ const contents = [
   "Te doy mi corazón 💍(JOYA BRIDGERTON)",
 
   "Un recuerdito de nosotros💝(FOTO)",
-  "",
+  "Para que siempre brilles(CUPON DE UÑAS)",
   ""
 ];
 
 // Fecha inicio (ajusta el año si es necesario)
 const startDate = new Date();
-startDate.setHours(13, 0, 0, 0) //13:00pm
+startDate.setMinutes(startDate.getMinutes() + 1);
+startDate.setSeconds(0, 0);
+//startDate.setHours(13, 0, 0, 0) //13:00pm
 
 
 
@@ -83,15 +85,17 @@ function render() {
   cardsContainer.innerHTML = "";
 
   gifts.forEach((text, i) => {
-    const unlockTime = new Date(startDate.getTime() + i * 60 * 60 * 1000);
-    const unlocked =  true //>= unlockTime;
+    const unlockTime = new Date(startDate.getTime() + i * 60 * 60 * 1000)//new Date(startDate.getTime() + i * 60 * 60 * 1000);
+    const unlocked =  now >= unlockTime;
     const hour = unlockTime.getHours();
     const hourLabel = `${hour}:00`
 
     const card = document.createElement("div");
     card.className = `card ${unlocked ? "unlocked" : "locked"}`;
 
-    card.innerHTML = `<strong>${hourLabel}</strong><br>🔒`;
+    card.innerHTML =  `<strong>${hourLabel}</strong><br>
+                           ${unlocked ? "🔓" : "🔒"}`;
+      //`<strong>${hourLabel}</strong><br>🔒`;
       
 
       if (unlocked) {
@@ -121,6 +125,7 @@ const modalBody = document.getElementById("modalBody");
 const closeModal = document.getElementById("closeModal");
 
 function openModal(content) {
+  //modal.classList.add("hidden");
   modalBody.innerHTML = content;
   modal.classList.remove("hidden");
 }
@@ -141,10 +146,4 @@ if (e.target === modal){
   closeModalClean();
 }
 }
-)
-
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.add("hidden");
-  }
-});
+);
