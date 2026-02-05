@@ -58,9 +58,9 @@ const contents = [
 
 // Fecha inicio (ajusta el año si es necesario)
 const startDate = new Date();
-startDate.setMinutes(startDate.getMinutes() + 1);
-startDate.setSeconds(0, 0);
-//startDate.setHours(13, 0, 0, 0) //13:00pm
+//startDate.setMinutes(startDate.getMinutes() + 1);
+//startDate.setSeconds(0, 0);
+startDate.setHours(13, 0, 0, 0) //13:00pm
 
 
 
