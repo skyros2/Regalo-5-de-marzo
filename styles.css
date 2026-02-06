@@ -15,6 +15,7 @@ h1 {
 }
 
 body {
+  position: relative;
   background:
     linear-gradient(rgba(250,247,242,0.95), rgba(250,247,242,0.95)),
     url("https://www.transparenttextures.com/patterns/paper-fibers.png");
@@ -215,7 +216,7 @@ body::after {
 body::before,
 body::after {
   content: "";
-  position: fixed;
+  position: absolute;
   width: 180px;
   height: 180px;
   background-size: contain;
@@ -225,7 +226,7 @@ body::after {
   z-index: 0;
 }
 .floral-frame {
-  position: fixed;
+  position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;
