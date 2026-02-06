@@ -16,6 +16,7 @@ h1 {
 
 body {
   position: relative;
+  min-height: 100vh;
   background:
     linear-gradient(rgba(250,247,242,0.95), rgba(250,247,242,0.95)),
     url("https://www.transparenttextures.com/patterns/paper-fibers.png");
@@ -194,7 +195,7 @@ footer {
 }
 
 
-body::before,
+/*body::before,
 body::after {
   content: "🌸 ❦ 🌷 ❦ 🌸";
   display: block;
@@ -211,9 +212,9 @@ body::before {
 
 body::after {
   margin: 30px 0 20px;
-}
+} */
 
-body::before,
+/*body::before,
 body::after {
   content: "";
   position: absolute;
@@ -224,10 +225,14 @@ body::after {
   opacity: 0.45;
   pointer-events: none;
   z-index: 0;
-}
+}*/
+
 .floral-frame {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
 }
@@ -282,3 +287,30 @@ body::after {
   background-image: url("imagenes/pngtree-delicate-watercolor-flower-corner-border-png-image_14023259.png");
 }
 
+header,
+main,
+.footer{
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Asegura que el contenido quede sobre las flores */
+header,
+main,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* 📱 Ajustes para celular */
+@media (max-width: 480px) {
+  .floral-frame::before,
+  .floral-frame::after,
+  .floral-frame .top-right,
+  .floral-frame .bottom-left {
+    width: 120px;
+    height: 120px;
+    opacity: 0.35;
+  }
+}
