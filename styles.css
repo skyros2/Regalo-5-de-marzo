@@ -41,12 +41,17 @@ header p {
 
 main {
   padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 24px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 15px;
+  padding: 10px;
 }
 
 .card {
@@ -188,5 +193,91 @@ footer {
 }
 
 
+body::before,
+body::after {
+  content: "🌸 ❦ 🌷 ❦ 🌸";
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #c7a17a;
+  opacity: 0.6;
+  letter-spacing: 0.4rem;
+}
 
+body::before {
+  margin: 20px 0 10px;
+}
+
+body::after {
+  margin: 30px 0 20px;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 180px;
+  height: 180px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+}
+.floral-frame {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Base común */
+.floral-frame::before,
+.floral-frame::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.45;
+}
+
+/* Arriba izquierda */
+.floral-frame::before {
+  top: 0;
+  left: 0;
+  background-image: url("imagenes/arribaAlazquierda.png");
+}
+
+/* Abajo derecha */
+.floral-frame::after {
+  bottom: 0;
+  right: 0;
+  background-image: url("imagenes/abajoaladerecha.png");
+}
+
+.floral-frame .top-right,
+.floral-frame .bottom-left {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.45;
+}
+
+/* Arriba derecha */
+.floral-frame .top-right {
+  top: 0;
+  right: 0;
+  background-image: url("imagenes/arribaAladerecha.png");
+}
+
+/* Abajo izquierda */
+.floral-frame .bottom-left {
+  bottom: 0;
+  left: 0;
+  background-image: url("imagenes/pngtree-delicate-watercolor-flower-corner-border-png-image_14023259.png");
+}
 
