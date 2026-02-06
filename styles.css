@@ -1,187 +1,167 @@
-* {
-  box-sizing: border-box;
-}
+
+
+
+
 
 body {
-  font-family: 'Playfair Display', serif;
-  background: #faf7f2;
-  color: #4b3a3a;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  background: linear-gradient(180deg, #fff7f2, #fdf4ee);
+  color: #4a3b36;
 }
 
-h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
-  color: #7a2d3a;
-}
-
-body {
-  background:
-    linear-gradient(rgba(250,247,242,0.95), rgba(250,247,242,0.95)),
-    url("https://www.transparenttextures.com/patterns/paper-fibers.png");
-}
-
-
+/* 🌸 HEADER */
 header {
-  padding: 30px 20px;
+  text-align: center;
+  padding: 3rem 1.5rem 2rem;
+  background: radial-gradient(circle at top, #fde8e8, transparent 70%);
 }
 
-h1 {
-  color: #c9184a;
-  margin-bottom: 5px;
+header h1 {
+  font-size: 2.8rem;
+  margin: 0.5rem 0;
 }
 
 header p {
-  margin-top: 0;
+  margin: 0.3rem 0;
+  font-style: italic;
 }
 
-#countdown {
-  margin-top: 15px;
-  font-weight: bold;
+.ornament {
+  font-size: 1.8rem;
+  opacity: 0.6;
 }
 
+/* 💝 CONTENIDO */
 main {
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  padding-bottom: 3rem;
 }
 
+/* 🎁 GRID DE TARJETAS */
 .grid {
+  width: 100%;
+  max-width: 420px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.2rem;
+  margin: 2rem;
 }
 
+/* 🎴 TARJETAS */
 .card {
-  background: #fffdf9;
-  border: 1px solid #e6d6c9;
+  min-width: 160px;
+  background: #fffaf6;
   border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: all 0.35s ease;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card.locked {
+  opacity: 0.5;
+}
+
+.card.unlocked {
+  cursor: pointer;
 }
 
 .card.unlocked:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
-.card.locked {
-  opacity: 0.6;
-}
-
+/* ✨ ANIMACIÓN SUAVE AL DESBLOQUEAR */
 .card.unlocked {
-  border: 1px solid #e6cfc2;
-  background: linear-gradient(180deg, #fffdf9, #faf4ee);
-  
+  animation: unlockFade 0.5s ease forwards;
 }
 
-.card.unlocked{
-  animation: unlockFade 0.6s ease;
-}
-
-@keyframes unlockFade{
-  from{
-    opacity: 0;
+@keyframes unlockFade {
+  from {
+    opacity: 0.6;
     transform: scale(0.96);
   }
-  to{
+  to {
     opacity: 1;
     transform: scale(1);
   }
 }
 
-.card span.lock {
-  font-size: 1.2rem;
-  margin-left: 6px;
+.card strong {
+  font-size: 1.1rem;
 }
 
-
-.unlocked {
-  background: #ffe3ec;
+/* 🌷 FOOTER */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-style: italic;
+  opacity: 0.8;
 }
 
-footer {
-  margin-top: 30px;
-  padding-bottom: 20px;
-  font-size: 12px;
-  color: #666;
-}
-
+/* 💌 MODAL */
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.4);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 1000;
+}
 
-  opacity: 1;
-  transition: opacity 0.3s ease;
+.modal.hidden {
+  display: none;
 }
 
 .modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 14px;
-  max-width: 420px;
-  text-align: center;
+  background: #fffaf6;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalIn 0.4s ease;
+}
 
-  transform: scale(1);
-  transition: transform 0.3s ease;
+@keyframes modalIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 #closeModal {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 12px;
+  right: 14px;
+  border: none;
+  background: none;
+  font-size: 1.4rem;
   cursor: pointer;
-  font-size: 18px;
 }
 
-.hidden {
-  opacity: 0;
-  pointer-events: none;
+main{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
 }
 
-.hidden .modal-content{
-  transform: scale(0.9);
+.grid{
+  width: 100%;
+  max-width: 900px;
+  padding: 1rem;
 }
-
-.ornament {
-  text-align: center;
-  font-size: 2rem;
-  color: #c7a17a;
-  margin-bottom: 10px;
-}
-
-#modal {
-  background: rgba(0,0,0,0.4);
-}
-
-#modalBody {
-  background: #fffdf8;
-  border-radius: 20px;
-  padding: 30px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-  border: 1px solid #e6d6c9;
-  text-align: center;
-}
-
-#modalBody::before {
-  content: "✉️";
-  display: block;
-  font-size: 2rem;
-  text-align: center;
-  color: #c7a17a;
-  margin-bottom: 10px;
-}
-
-.footer {
-  margin-top: 40px;
-  font-style: italic;
-  color: #8b6f5c;
-}
-

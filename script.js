@@ -94,7 +94,7 @@ function render() {
     card.className = `card ${unlocked ? "unlocked" : "locked"}`;
 
     card.innerHTML =  `<strong>${hourLabel}</strong><br>
-                           ${unlocked ? "🔓" : "🔒"}`;
+                           ${unlocked ? "💝" : "🔒"}`;
       //`<strong>${hourLabel}</strong><br>🔒`;
       
 
