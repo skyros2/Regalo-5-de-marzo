@@ -17,22 +17,15 @@ const countdown = document.getElementById("countdown");
 //];
 
 const contents = [
-  "Flores para la belleza 🌷 (TULIPAN)",
 
-  "A veces el amor se derrite como chocolate 🍫(CHOCOLATE)",
-
-  "Lo esencial no siempre se ve, solo con el corazón se puede ver bien 👸(REGALO PRINCIPITO",
-
-  
   `<h2>🎥 Para ti</h2>
   <p>
-    Hay cosas que no quería escribir.  
-    Preferí mirarte y decirlas así(VIDEO).
+    Vas a tener que soportar un poco el cringe❤️.
   </p>
 
   <div class="video-wrapper">
     <iframe
-      src="https://www.youtube.com/embed/m6w7KLJyu4A"
+      src="https://www.youtube.com/embed/NHhdO9l-mXU"
       title="Video para ti"
       frameborder="0"
       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -40,20 +33,27 @@ const contents = [
     </iframe>
   </div>
   `,
+  "Flores para la belleza 🌷",
 
-  "PONER TEXTO DE ONE DIRECTION(ONE DIRECTION)",
+  "Your hand fits in mine like it's made just for me📯🎶",
 
-  "No soy bueno dando consejos. ¿Podria interesarte un comentario sarcástico?(REGALO FRIENDS)",
+  "Esta vez todo es diferente, veo en ti la luz🎶",
 
-  "The stakes are high, the water's rough but this love is ours 🎵(REGALO TAYLOR)",
+  "A veces el amor se derrite como chocolate 🍫",
 
-  "Te amo como al fuego 📖 (REGALO LIBRO AMANECER EN LA COSECHA)",
+  "No soy bueno dando consejos. ¿Podria interesarte un comentario sarcástico?",
 
-  "Te doy mi corazón 💍(JOYA BRIDGERTON)",
+  "The stakes are high, the water's rough but this love is ours 🎵",
 
-  "Un recuerdito de nosotros💝(FOTO)",
-  "Para que siempre brilles(CUPON DE UÑAS)",
-  ""
+  "Un recuerdito de nosotros💝",
+
+  "Popular you're gonna be popular",
+
+  "Para que sigas brillando",
+
+  "Te amo como al fuego 📖",
+  "Te doy mi corazón 💍",
+  
 ];
 
 // Fecha inicio (ajusta el año si es necesario)
