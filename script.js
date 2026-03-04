@@ -35,13 +35,13 @@ const contents = [
   `,
   "Flores para la belleza 🌷",
 
-  "Your hand fits in mine like it's made just for me📯🎶",
-
   "Esta vez todo es diferente, veo en ti la luz🎶",
 
   "A veces el amor se derrite como chocolate 🍫",
 
-  "No soy bueno dando consejos. ¿Podria interesarte un comentario sarcástico?",
+  "Your hand fits in mine like it's made just for me📯🎶",
+
+  "Bienvenida al mundo real. ¡Apesta! Te va a encantar",
 
   "The stakes are high, the water's rough but this love is ours 🎵",
 
@@ -52,6 +52,7 @@ const contents = [
   "Para que sigas brillando",
 
   "Te amo como al fuego 📖",
+
   "Te doy mi corazón 💍",
   
 ];
